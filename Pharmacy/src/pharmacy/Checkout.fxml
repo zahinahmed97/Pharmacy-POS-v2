@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Point3D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="800.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pharmacy.CheckoutController">
+   <children>
+      <ImageView fx:id="image" fitHeight="820.0" fitWidth="850.0" opacity="0.37" pickOnBounds="true" preserveRatio="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <rotationAxis>
+            <Point3D />
+         </rotationAxis></ImageView>
+      <Label fx:id="message" alignment="CENTER" contentDisplay="CENTER" layoutX="103.0" layoutY="21.0" prefHeight="69.0" prefWidth="644.0" textAlignment="CENTER">
+         <font>
+            <Font name="Arial" size="39.0" />
+         </font>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </Label>
+      <TextField fx:id="FullTotalprice" editable="false" layoutX="697.0" layoutY="531.0" prefHeight="25.0" prefWidth="124.0" promptText="Total price" />
+      <Label layoutX="543.0" layoutY="531.0" text="Amount payable:">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label alignment="TOP_LEFT" layoutX="23.0" layoutY="101.0" prefHeight="38.0" prefWidth="312.0" text="Receipt:">
+         <font>
+            <Font name="Calibri" size="26.0" />
+         </font>
+      </Label>
+      <HBox layoutX="26.0" layoutY="139.0" prefHeight="380.0" prefWidth="798.0">
+         <children>
+            <TableView fx:id="receipttable" prefHeight="376.0" prefWidth="798.0">
+               <columns>
+                  <TableColumn fx:id="receiptIDcolumn" prefWidth="144.0" text="ID" />
+                  <TableColumn fx:id="receiptNamecolumn" prefWidth="155.0" text="Name" />
+                  <TableColumn fx:id="receiptManufacturercolumn" prefWidth="180.0" text="Manufacturer" />
+                  <TableColumn fx:id="receiptQuantitycolumn" prefWidth="108.0" text="Quantity" />
+                  <TableColumn fx:id="receiptPricecolumn" prefWidth="101.0" text="Price" />
+                  <TableColumn fx:id="receiptTotalPricecolumn" prefWidth="109.0" text="Total Price" />
+               </columns>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </TableView>
+         </children>
+         <opaqueInsets>
+            <Insets left="15.0" right="15.0" />
+         </opaqueInsets>
+      </HBox>
+      <Button layoutX="545.0" layoutY="645.0" mnemonicParsing="false" onAction="#Exit" prefHeight="53.0" prefWidth="274.0" text="Exit" />
+   </children>
+</AnchorPane>

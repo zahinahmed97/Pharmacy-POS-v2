@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Point3D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="800.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pharmacy.NewCustomerController">
+   <children>
+      <ImageView fx:id="image" fitHeight="820.0" fitWidth="850.0" opacity="0.37" pickOnBounds="true" preserveRatio="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <rotationAxis>
+            <Point3D />
+         </rotationAxis></ImageView>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="145.0" layoutY="87.0" prefHeight="69.0" prefWidth="535.0" text="Hello New Customer!" textAlignment="CENTER">
+         <font>
+            <Font name="Arial" size="39.0" />
+         </font>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </Label>
+      <Label alignment="CENTER" layoutX="244.0" layoutY="214.0" prefHeight="38.0" prefWidth="312.0" text="Please enter your details">
+         <font>
+            <Font name="Calibri" size="26.0" />
+         </font>
+      </Label>
+      <Label layoutX="172.0" layoutY="398.0" prefHeight="51.0" prefWidth="114.0" text="UserID" />
+      <Label layoutX="172.0" layoutY="319.0" prefHeight="51.0" prefWidth="114.0" text="Full name" />
+      <Label layoutX="172.0" layoutY="475.0" prefHeight="51.0" prefWidth="114.0" text="Password" />
+      <Label layoutX="172.0" layoutY="554.0" prefHeight="51.0" prefWidth="114.0" text="Confirm Password" />
+      <TextField fx:id="Name" layoutX="286.0" layoutY="332.0" prefHeight="25.0" prefWidth="312.0" />
+      <TextField fx:id="ID" layoutX="286.0" layoutY="413.0" prefHeight="25.0" prefWidth="312.0" />
+      <PasswordField fx:id="Password" layoutX="286.0" layoutY="488.0" prefHeight="25.0" prefWidth="312.0" />
+      <PasswordField fx:id="CfmPassword" layoutX="286.0" layoutY="567.0" prefHeight="25.0" prefWidth="312.0" />
+      <Button layoutX="470.0" layoutY="660.0" mnemonicParsing="false" onAction="#CreateCustomer" prefHeight="51.0" prefWidth="210.0" text="Submit" />
+      <Button fx:id="Cancel" layoutX="172.0" layoutY="660.0" mnemonicParsing="false" onAction="#Logout" prefHeight="51.0" prefWidth="210.0" text="Cancel" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Point3D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="800.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pharmacy.EmployeeHomeController">
+   <children>
+      <ImageView fx:id="image" fitHeight="820.0" fitWidth="850.0" opacity="0.37" pickOnBounds="true" preserveRatio="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <rotationAxis>
+            <Point3D />
+         </rotationAxis></ImageView>
+      <Label fx:id="message" alignment="CENTER" contentDisplay="CENTER" layoutX="133.0" layoutY="14.0" prefHeight="69.0" prefWidth="535.0" textAlignment="CENTER">
+         <font>
+            <Font name="Arial" size="39.0" />
+         </font>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </Label>
+      <Label alignment="TOP_LEFT" layoutX="23.0" layoutY="101.0" prefHeight="38.0" prefWidth="312.0" text="Current Stock:">
+         <font>
+            <Font name="Calibri" size="26.0" />
+         </font>
+      </Label>
+      <Button layoutX="679.0" layoutY="14.0" mnemonicParsing="false" onAction="#Logout" prefHeight="38.0" prefWidth="142.0" text="Logout" />
+      <HBox layoutX="23.0" layoutY="139.0" prefHeight="503.0" prefWidth="798.0">
+         <children>
+            <TableView fx:id="medicinetable" editable="true" prefHeight="503.0" prefWidth="798.0">
+              <columns>
+                <TableColumn fx:id="IDcolumn" prefWidth="103.0" text="ID" />
+                <TableColumn fx:id="Namecolumn" prefWidth="196.0" text="Name" />
+                  <TableColumn fx:id="Manufacturercolumn" prefWidth="194.0" text="Manufacturer" />
+                  <TableColumn fx:id="Quantitycolumn" prefWidth="144.0" text="Quantity" />
+                  <TableColumn fx:id="Pricecolumn" prefWidth="160.0" text="Price" />
+              </columns>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </TableView>
+         </children>
+         <opaqueInsets>
+            <Insets left="15.0" right="15.0" />
+         </opaqueInsets>
+      </HBox>
+      <TextField fx:id="id" layoutX="206.0" layoutY="671.0" prefHeight="25.0" prefWidth="65.0" promptText="ID" />
+      <TextField fx:id="quantity" layoutX="594.0" layoutY="672.0" prefHeight="25.0" prefWidth="103.0" promptText="Quantity" />
+      <TextField fx:id="manufacturer" layoutX="406.0" layoutY="672.0" prefHeight="25.0" prefWidth="175.0" promptText="Manufacturer" />
+      <TextField fx:id="name" layoutX="278.0" layoutY="671.0" prefHeight="25.0" prefWidth="118.0" promptText="Name" />
+      <Label layoutX="16.0" layoutY="671.0" text="To update (add/modify):">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Button layoutX="206.0" layoutY="698.0" mnemonicParsing="false" onAction="#AddMedicine" prefHeight="25.0" prefWidth="114.0" text="Add Medicine" />
+      <Button layoutX="335.0" layoutY="698.0" mnemonicParsing="false" onAction="#UpdateMedicine" prefHeight="25.0" prefWidth="114.0" text="Update Medicine" />
+      <Label layoutX="16.0" layoutY="731.0" text="To remove:">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <TextField fx:id="id2" layoutX="206.0" layoutY="732.0" prefHeight="25.0" prefWidth="65.0" promptText="ID" />
+      <Button layoutX="206.0" layoutY="766.0" mnemonicParsing="false" onAction="#DeleteMedicine" prefHeight="25.0" prefWidth="114.0" text="Remove Medicine" />
+      <Button layoutX="697.0" layoutY="723.0" mnemonicParsing="false" onAction="#LoadMedicinesData" prefHeight="69.0" prefWidth="124.0" text="Load" />
+      <Button layoutX="545.0" layoutY="723.0" mnemonicParsing="false" onAction="#Clearfields" prefHeight="69.0" prefWidth="124.0" text="Clear " />
+      <TextField fx:id="price" layoutX="718.0" layoutY="672.0" prefHeight="25.0" prefWidth="103.0" promptText="Price" />
+   </children>
+</AnchorPane>

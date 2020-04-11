@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="503.0" prefWidth="700.0" style="-fx-background-color: #A2C5CB;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pharmacy.LoginController">
+   <children>
+      <ImageView fx:id="image" fitHeight="503.0" fitWidth="628.0" pickOnBounds="true" preserveRatio="false" />
+      <AnchorPane layoutX="440.0" layoutY="26.0" prefHeight="503.0" prefWidth="271.0" style="-fx-background-color: #C1D9DB;" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <effect>
+            <InnerShadow blurType="GAUSSIAN" color="WHITE" height="0.0" radius="0.0" width="0.0" />
+         </effect>
+         <children>
+            <Label layoutX="94.0" layoutY="144.0" prefHeight="44.0" prefWidth="105.0" text="Username" />
+            <TextField fx:id="Username" layoutX="56.0" layoutY="201.0" />
+            <Label layoutX="96.0" layoutY="227.0" prefHeight="34.0" prefWidth="72.0" text="Password" />
+            <PasswordField fx:id="Password" layoutX="56.0" layoutY="272.0" prefHeight="26.0" prefWidth="152.0" />
+            <Button layoutX="56.0" layoutY="323.0" mnemonicParsing="false" onAction="#LoginCheck" prefHeight="32.0" prefWidth="152.0" text="Submit" />
+            <Label layoutX="99.0" layoutY="64.0" text="You are" />
+            <Button layoutX="60.0" layoutY="438.0" mnemonicParsing="false" onAction="#CreateCustomer" prefHeight="32.0" prefWidth="152.0" text="New Customer?" />
+            <ComboBox fx:id="Role" layoutX="38.0" layoutY="101.0" prefHeight="29.0" prefWidth="189.0" promptText="Customer/Employee" />
+         </children>
+      </AnchorPane>
+      <Label fx:id="Status" layoutX="181.0" layoutY="314.0" prefHeight="18.0" prefWidth="90.0" text="Label" />
+   </children>
+   <effect>
+      <InnerShadow />
+   </effect>
+</AnchorPane>
